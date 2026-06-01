@@ -103,8 +103,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}      # auto-provided by GitHub
+          username: ${{ secrets.ITHUB_ACTOR }}
+          password: ${{ secrets.ITHUB_TOKEN }}      # auto-provided by GitHub
 
       # ── Tag the image with both 'latest' and the commit SHA ──
       - name: Extract metadata for Docker
